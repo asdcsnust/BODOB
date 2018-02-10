@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MyAwesomeReactComponent from './MyAwesomeReactComponent';
 import AppBarExampleIcon from './AppBarExampleIcon';
 import AvatarExampleSimple from './AvatarExampleSimple';
@@ -19,10 +21,12 @@ import ChipExampleSimple from './ChipExampleSimple';
 import DatePickerExampleSimple from './DatePickerExampleSimple';
 import DatePickerExampleInline from './DatePickerExampleInline';
 import ListExampleMessages from './ListExampleMessages';
+import BottomNavigationExampleSimple from './BottomNavigationExampleSimple';
 
 
 const App = () => (
-  <MuiThemeProvider>
+  <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+    {/*
     <AppBarExampleIcon />
     <AutoCompleteExampleDataSource />
     <BadgeExampleSimple />
@@ -38,7 +42,8 @@ const App = () => (
     <DatePickerExampleSimple />
     <DatePickerExampleInline />
     <ListExampleMessages />
-
+    */}
+    <BottomNavigationExampleSimple/>
   </MuiThemeProvider>
 );
 
