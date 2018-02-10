@@ -21,23 +21,15 @@ import ChipExampleSimple from './ChipExampleSimple';
 import DatePickerExampleSimple from './DatePickerExampleSimple';
 import DatePickerExampleInline from './DatePickerExampleInline';
 import ListExampleMessages from './ListExampleMessages';
-<<<<<<< HEAD
 import BottomNavigationExampleSimple from './BottomNavigationExampleSimple';
-=======
 import TextFieldExampleSimple from './TextFieldExampleSimple';
->>>>>>> 3ea70e71b8b8ea4f05f81c3a38dfa3287fc226a4
 
 
 const App = () => (
-  <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-    {/*
+  <MuiThemeProvider>
     <AppBarExampleIcon />
     <ListExampleMessages />
-<<<<<<< HEAD
-    */}
     <BottomNavigationExampleSimple/>
-=======
->>>>>>> 3ea70e71b8b8ea4f05f81c3a38dfa3287fc226a4
   </MuiThemeProvider>
 );
 
