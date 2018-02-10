@@ -21,15 +21,13 @@ import DatePickerExampleInline from './DatePickerExampleInline';
 import ListExampleMessages from './ListExampleMessages';
 import TextFieldExampleSimple from './TextFieldExampleSimple';
 
-
 const App = () => (
   <MuiThemeProvider>
-    <AppBarExampleIcon />
-    <ListExampleMessages />
+
   </MuiThemeProvider>
 );
 
 ReactDOM.render(
   <App />,
-  document.getElementById('app')
+  document.getElementById('app0210')
 );

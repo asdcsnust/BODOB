@@ -9,6 +9,13 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 
+import DatePicker from 'material-ui/DatePicker';
+import TextField from 'material-ui/TextField';
+import ChipInput from 'material-ui-chip-input';
+import RaisedButton from 'material-ui/RaisedButton';
+import {fullWhite} from 'material-ui/styles/colors';
+import FontIcon from 'material-ui/FontIcon';
+
 const iconButtonElement = (
   <IconButton
     touch={true}
@@ -27,144 +34,135 @@ const rightIconMenu = (
   </IconMenu>
 );
 
+const picStyle = {
+  top : '30px',
+  width : '80px',
+  height : '80px'
+};
+
+const textStyle = {
+  paddingLeft : '40px',
+  paddingTop : '-20px',
+  paddingBottom : '-20px'
+}
+
 const ListExampleMessages = () => (
   <div>
     <div>
       <List>
-        <Subheader>Today</Subheader>
+        <Subheader style={{ fontSize : '20px', fontWeight : 'bold'}}>동대문장애인복지관</Subheader>
+
+        <Divider />
+
+        2017.10.21
+
+        <Subheader style={{ fontSize : '20px', fontWeight : 'bold'}}>프로젝트 생성</Subheader>
+
         <ListItem
-          leftAvatar={<Avatar src="images/ok-128.jpg" />}
-          primaryText="Brunch this weekend?"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Brendan Lim</span> --
-              I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/kolage-128.jpg" />}
           primaryText={
-            <p>Summer BBQ&nbsp;&nbsp;<span style={{color: lightBlack}}>4</span></p>
-          }
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>to me, Scott, Jennifer</span> --
-              Wish I could come, but I&apos;m out of town this weekend.
-            </p>
-          }
-          secondaryTextLines={2}
+            <div>
+            프로젝트 명
+            <TextField
+              fullWidth = {true}
+              hintText="프로젝트 명을 입력하세요."
+            />
+            </div>
+        }
         />
-        <Divider inset={true} />
+
+
         <ListItem
-          leftAvatar={<Avatar src="images/uxceo-128.jpg" />}
-          primaryText="Oui oui"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Grace Ng</span> --
-              Do you have Paris recommendations? Have you ever been?
-            </p>
+          leftAvatar={<Avatar style = {picStyle} src="images/pic1.jpg" />}
+          primaryText={
+            <div style={textStyle}>
+             공사시작
+                 <DatePicker hintText="시작날짜를 입력하세요." container="inline" />
+             공사종료
+                 <DatePicker hintText="종료날짜를 입력하세요." container="inline" />
+             </div>
           }
-          secondaryTextLines={2}
         />
-        <Divider inset={true} />
+
         <ListItem
-          leftAvatar={<Avatar src="images/kerem-128.jpg" />}
-          primaryText="Birdthday gift"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Kerem Suer</span> --
-              Do you have any ideas what we can get Heidi for her birthday? How about a pony?
-            </p>
+          primaryText={
+            <div>
+              현장소장
+              <div>
+                <ChipInput
+                  style = {{width : "100%"}}
+                  defaultValue={['유무영']}
+                  onChange={(chips) => handleChange(chips)}
+                />
+              </div>
+            </div>
           }
-          secondaryTextLines={2}
         />
-        <Divider inset={true} />
+
         <ListItem
-          leftAvatar={<Avatar src="images/raquelromanp-128.jpg" />}
-          primaryText="Recipe to try"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Raquel Parrado</span> --
-              We should eat this: grated squash. Corn and tomatillo tacos.
-            </p>
+          primaryText={
+            <div>
+              현장스텝
+              <div>
+                <ChipInput
+                 style = {{width : "100%"}}
+                  defaultValue={['유성근','정서경','박미리']}
+                  onChange={(chips) => handleChange(chips)}
+                />
+              </div>
+            </div>
           }
-          secondaryTextLines={2}
         />
+
+        <ListItem
+          primaryText={
+            <div>
+              설계담당
+              <div>
+                <ChipInput
+                 style = {{width : "100%"}}
+                  defaultValue={['최은혜','이세형','김재하']}
+                  onChange={(chips) => handleChange(chips)}
+                />
+              </div>
+            </div>
+          }
+        />
+
+        <ListItem
+          primaryText={
+            <div>
+              PM
+              <div>
+                <ChipInput
+                 style = {{width : "100%"}}
+                  defaultValue={['유무영']}
+                  onChange={(chips) => handleChange(chips)}
+                />
+              </div>
+            </div>
+          }
+        />
+
+        <ListItem
+          primaryText={
+            <div>
+              용도
+              <div>
+                <ChipInput
+                 style = {{width : "100%"}}
+                  defaultValue={['주거','상업시설']}
+                  onChange={(chips) => handleChange(chips)}
+                />
+              </div>
+            </div>
+          }
+        />
+
       </List>
     </div>
-    <div>
-      <List>
-        <Subheader>Today</Subheader>
-        <ListItem
-          leftAvatar={<Avatar src="images/ok-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Brendan Lim"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Brunch this weekend?</span><br />
-              I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/kolage-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="me, Scott, Jennifer"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Summer BBQ</span><br />
-              Wish I could come, but I&apos;m out of town this weekend.
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/uxceo-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Grace Ng"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Oui oui</span><br />
-              Do you have any Paris recs? Have you ever been?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/kerem-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Kerem Suer"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Birthday gift</span><br />
-              Do you have any ideas what we can get Heidi for her birthday? How about a pony?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/raquelromanp-128.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Raquel Parrado"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Recipe to try</span><br />
-              We should eat this: grated squash. Corn and tomatillo tacos.
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-      </List>
-    </div>
+    <RaisedButton backgroundColor="#757575" labelColor = "white" label="수정" fullWidth={true} />
   </div>
+
 );
 
 export default ListExampleMessages;

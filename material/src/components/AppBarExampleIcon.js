@@ -14,15 +14,27 @@ const imgStyle = {
 };
 
 const imgStyle1 = {
-  width:'',
-  height:''
-}
+  height : '25px',
+  marginTop : '10px',
+  marginRight : '10px'
+};
+
+const imgStyle2 = {
+  height : '25px',
+  marginTop : '10px'
+};
+
 
 var main = "main";
 const AppBarExampleIcon = () => (
   <AppBar
     title={<img style={imgStyle} src="/images/logo.png"/>}
-    iconElementRight={<img style={imgStyle1} src="/images/alarm.png"/>}
+    iconElementRight={
+      <div>
+        <img style={imgStyle1} src="/images/bar-chart.png"/>
+        <img style={imgStyle2} src="/images/alarm.png"/>
+      </div>
+    }
     style={{ backgroundColor: '#757575'}}
   />
 );
