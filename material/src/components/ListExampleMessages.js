@@ -15,6 +15,12 @@ import ChipInput from 'material-ui-chip-input';
 import RaisedButton from 'material-ui/RaisedButton';
 import {fullWhite} from 'material-ui/styles/colors';
 import FontIcon from 'material-ui/FontIcon';
+import Slider from 'material-ui/Slider';
+import FullscreenDialog from 'material-ui-fullscreen-dialog'
+
+import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel'
+import { green400, green600, blue400, blue600, red400, red600, cyan500 } from 'material-ui/styles/colors'
+
 
 const iconButtonElement = (
   <IconButton
@@ -46,15 +52,64 @@ const textStyle = {
   paddingBottom : '-20px'
 }
 
+const styles = {
+  customWidth: {
+    width: 150,
+  },
+};
+
+
 const ListExampleMessages = () => (
-  <div>
+  <div style = {{marginBottom : '60px'}} >
     <div>
       <List>
-        <Subheader style={{ fontSize : '20px', fontWeight : 'bold'}}>동대문장애인복지관</Subheader>
+      <Subheader style={{ fontSize : '20px', fontWeight : 'bold'}}>공종추가</Subheader>
+      <Divider />
 
-        <Divider />
+      <Divider />
+      <Subheader style={{ fontSize : '20px', fontWeight : 'bold'}}>통계</Subheader>
 
-        2017.10.21
+
+      <Divider />
+
+        <div>
+          프로젝트
+          <div>
+            <ChipInput
+              style = {{width : "100%"}}
+              defaultValue={['동대문장애인 복지관','신도림 대림아파트 1차','신도림 대림아파트 2차']}
+              onChange={(chips) => handleChange(chips)}
+            />
+          </div>
+        </div>
+          기간설정
+      <Divider />
+
+        <ListItem
+         leftAvatar={<Avatar src="/images/home1.jpg" />}
+         rightIconButton={rightIconMenu}
+         primaryText="철거"
+         secondaryText={
+           <p>
+             <span style={{color: darkBlack}}>청운철거 07:00~09:00 투입인원 : 6명</span>
+           </p>
+         }
+         secondaryTextLines={2}
+       />
+
+       <ListItem
+        leftAvatar={<Avatar src="/images/home2.jpg" />}
+        rightIconButton={rightIconMenu}
+        primaryText="전기"
+        secondaryText={
+          <p>
+            <span style={{color: darkBlack}}>청운전기 07:00~17:00 투입인원 : 6명</span>
+          </p>
+        }
+        secondaryTextLines={2}
+      />
+
+      <Divider />
 
         <Subheader style={{ fontSize : '20px', fontWeight : 'bold'}}>프로젝트 생성</Subheader>
 

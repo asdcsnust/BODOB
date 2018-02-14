@@ -8,10 +8,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "material-auto-rotating-carousel": "^1.7.0",
     "material-ui": "^0.20.0",
     "material-ui-chip-input": "^0.18.5",
+    "material-ui-fullscreen-dialog": "^0.7.2",
+    "material-ui-image": "^2.1.1",
+    "material-ui-upload": "^1.2.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-swipeable-views": "^0.12.12"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

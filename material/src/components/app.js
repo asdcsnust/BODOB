@@ -23,11 +23,16 @@ import DatePickerExampleInline from './DatePickerExampleInline';
 import ListExampleMessages from './ListExampleMessages';
 import BottomNavigationExampleSimple from './BottomNavigationExampleSimple';
 import TextFieldExampleSimple from './TextFieldExampleSimple';
-
+import SliderExampleControlled from './SliderExampleControlled';
+import SelectFieldExampleSimple from './SelectFieldExampleSimple';
+import TimePickerExampleComplex from './TimePickerExampleComplex';
 
 const App = () => (
   <MuiThemeProvider>
     <AppBarExampleIcon />
+    {/*<SliderExampleControlled />*/}
+    <SelectFieldExampleSimple />
+    <TimePickerExampleComplex />
     <ListExampleMessages />
     <BottomNavigationExampleSimple/>
   </MuiThemeProvider>
