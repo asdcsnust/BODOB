@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './Header';
 import Content from './Content';
 import RandomNumber from './RandomNumber';
+import MyComponent from './MyComponent';
 
 class App extends React.Component {
 
@@ -30,6 +31,7 @@ class App extends React.Component {
                           body={ this.props.contentBody }/>
                       <RandomNumber number={this.state.value}
                                   onUpdate={this.updateValue} />
+                <MyComponent />
             </div>
         );
     }

@@ -23,13 +23,20 @@ import DatePickerExampleInline from './DatePickerExampleInline';
 import ListExampleMessages from './ListExampleMessages';
 import BottomNavigationExampleSimple from './BottomNavigationExampleSimple';
 import TextFieldExampleSimple from './TextFieldExampleSimple';
-
+import ImageSlider from './ImageSlider';
+import Spacer from './Spacer';
+import MyComponent from './MyComponent';
 
 const App = () => (
   <MuiThemeProvider>
     <AppBarExampleIcon />
     <ListExampleMessages />
+
+    <ImageSlider />
+    <MyComponent />
     <BottomNavigationExampleSimple/>
+    <Spacer />
+    
   </MuiThemeProvider>
 );
 
